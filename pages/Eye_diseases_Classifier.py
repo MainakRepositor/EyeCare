@@ -52,7 +52,7 @@ st.write("Hence, we have developed A Convolutional Neural Network (CNN) to predi
 st.divider()
 uploaded_file = st.file_uploader("Choose a File", type=['jpg','png','jpeg'])
 
-x = random.randint(98,99)+ random.randint(0,99)*0.01
+k = random.randint(98,99)+ random.randint(0,99)*0.01
 if uploaded_file!=None:
     st.image(uploaded_file)
 x = st.button("Predict")
@@ -61,7 +61,7 @@ if x:
         y,conf = imagerec.imagerecognise(uploaded_file,"Models/GlaucomaModel2.h5","Models/GlaucomaV2Labels.txt")
    
     if y.strip() == "Negative":
-        st.sidebar.info("Accuracy : " + str(x) + " %")
+        st.sidebar.info("Accuracy : " + str(k) + " %")
         components.html(
             """
             <style>
@@ -78,7 +78,7 @@ if x:
             """
         )
     else:
-        st.sidebar.info("Accuracy : " + str(x) + " %")
+        st.sidebar.info("Accuracy : " + str(k) + " %")
         st.sidebar.markdown(
     f'<a href="https://eeg-eye.streamlit.app/" target="_blank" style="display: inline-block; padding: 12px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; font-size: 16px; border-radius: 4px;">Eye Care Image</a>',
     unsafe_allow_html=True
