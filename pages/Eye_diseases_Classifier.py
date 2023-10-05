@@ -39,7 +39,7 @@ components.html(
     height=69,
 )
 
-st.title("Glaucoma Predictor")
+st.title("Eye Disease Detector")
 
 st.write('<style>div.row-widget.stMarkdown { font-size: 24px; }</style>', unsafe_allow_html=True)
 
