@@ -61,7 +61,7 @@ if x:
         y,conf = imagerec.imagerecognise(uploaded_file,"Models/GlaucomaModel2.h5","Models/GlaucomaV2Labels.txt")
    
     if y.strip() == "Negative":
-        st.sidebar.info("Accuracy: ",str(x))
+        st.sidebar.info("Accuracy : " + str(x) + " %")
         components.html(
             """
             <style>
@@ -78,7 +78,7 @@ if x:
             """
         )
     else:
-        st.sidebar.info("Accuracy: ",str(x))
+        st.sidebar.info("Accuracy : " + str(x) + " %")
         st.sidebar.markdown(
     f'<a href="https://eeg-eye.streamlit.app/" target="_blank" style="display: inline-block; padding: 12px 20px; background-color: #4CAF50; color: white; text-align: center; text-decoration: none; font-size: 16px; border-radius: 4px;">Eye Care Image</a>',
     unsafe_allow_html=True
@@ -93,7 +93,7 @@ if x:
                 font-family: "Source Sans Pro", sans-serif;
             }
             </style>
-            <h1>It is Glaucoma</h1>
+            <h1>Result : Positive. The eye has glaucoma or some other nervous diseases.</h1>
              <p>Requires thorough checkup of the optic nerves!</p>
             """
         )
