@@ -34,7 +34,7 @@ components.html(
             font-size: 2rem;
         }
     </style>
-    <p id="effect">Cureall AI</p>
+    <p id="effect">Vision Scanner</p>
     """,
     height=69,
 )
